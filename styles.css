@@ -1,0 +1,327 @@
+/*Master styles*/
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*Nav Styles*/
+
+.nav-wrapper {
+    display: flex;  /*puts elements in div class side by side*/
+    justify-content: space-between;
+    padding: 38px;
+
+}
+
+.left-side {
+    display: flex;
+}
+
+/* traverse down a tree and makes styling changes to all divs within left-side*/
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+/*portfolio styles*/
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* gives each item own column */
+}
+
+.portfolio-item-wrapper {
+    position: relative; /*place images and text atop one another*/
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*resize images to be same size*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken{
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* About Page Styles */
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 60%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
+.center {
+    display: table;
+    width: 100%;
+  }
+  
+  #social h2 {
+    color: #fff;
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #social {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  #social ul {
+    text-align: center;
+    padding-left: 0px;
+  }
+  
+  #social li {
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  #social li:first-child {
+    margin-left: 0px;
+  }
+  
+  #social li:last-child {
+    margin-right: 0px;
+  }
+  
+  
+  /** Facebook **/
+  
+  .linkedin {
+    width: 50px;
+    height: 50px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  
+  .linkedin .border {
+    background: transparent;
+    outline: none;
+    color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .linkedin .border:hover {
+    background: #3b5998;
+    border-color: #436aaf;
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-linkedin {
+    font-size: 25px;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
+  
+  
+  /** Twitter **/
+  
+  .twitter {
+    width: 50px;
+    height: 50px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  
+  .twitter .border {
+    background: transparent;
+    outline: none;
+    color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .twitter .border:hover {
+    background: #00aced;
+    border-color: #72c6e6;
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-twitter {
+    font-size: 25px;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
+  
+  
+  /** Instagram **/
+  
+  .github {
+    width: 50px;
+    height: 50px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  
+  .github .border {
+    background: transparent;
+    outline: none;
+    color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .github .border:hover {
+    background: #000000;
+    border-color: #7495af;
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-github {
+    font-size: 25px;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
+  
+  
+  /** dribbble **/
+  
+  .envelope {
+    width: 50px;
+    height: 50px;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  
+  .envelope .border {
+    background: transparent;
+    outline: none;
+    color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .envelope .border:hover {
+    background: #39e039;
+    border-color: #91f57d;
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-envelope {
+    font-size: 25px;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
